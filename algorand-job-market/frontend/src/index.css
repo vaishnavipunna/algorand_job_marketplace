@@ -1,0 +1,135 @@
+/* 🌈 Base Layout */
+:root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0a0a0f, #1e144a, #3b136f);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌟 Card & Container */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* ✨ Logo Hover Animations */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🧭 Upload Container (Fixed Alignment) */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Label styling */
+.upload-container label {
+  color: #b0c4ff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* File Input Styling */
+.upload-container input[type="file"] {
+  display: block;
+  width: 80%;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: rgba(20, 24, 35, 0.9);
+  color: #d1ddff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.upload-container input[type="file"]:hover {
+  border-color: #6ca8ff;
+  box-shadow: 0 0 10px rgba(108, 168, 255, 0.4);
+  transform: scale(1.02);
+}
+
+/* Uploaded file name text */
+.upload-container p {
+  color: #8ef9a3;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* 🌐 Buttons */
+button {
+  background: linear-gradient(90deg, #007aff, #a855f7);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+/* 📱 Responsive (Desktop alignment fix) */
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 3rem;
+  }
+
+  .upload-container {
+    max-width: 600px;
+  }
+}
